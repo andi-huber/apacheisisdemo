@@ -10,6 +10,6 @@
   - Simple Object
   - List All Test
   - Select any of the objects
-  - Click "Download Selected"
-  - The checkboxes are not reset(they would be reset in 2.0.0.M6)
+  - Click "Download Selected", a file will be downloaded
+  - The checkboxes are not reset after download(they would be reset in 2.0.0.M6)
   - Uncheck any of the check box
