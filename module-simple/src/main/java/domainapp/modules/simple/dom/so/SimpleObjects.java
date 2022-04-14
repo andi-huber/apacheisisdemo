@@ -84,7 +84,7 @@ public class SimpleObjects {
     public void ping() {
         jpaSupportService.getEntityManager(SimpleObject.class)
             .ifSuccess(entityManager -> {
-                final TypedQuery<SimpleObject> q = entityManager.createQuery(
+                final TypedQuery<SimpleObject> q = entityManager.orElseThrow().createQuery(
                         "SELECT p FROM SimpleObject p ORDER BY p.name",
                         SimpleObject.class)
                     .setMaxResults(1);

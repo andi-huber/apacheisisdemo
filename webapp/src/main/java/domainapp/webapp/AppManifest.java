@@ -9,7 +9,7 @@ import org.apache.isis.core.config.presets.IsisPresets;
 import org.apache.isis.core.runtimeservices.IsisModuleCoreRuntimeServices;
 import org.apache.isis.extensions.flyway.impl.IsisModuleExtFlywayImpl;
 import org.apache.isis.persistence.jpa.eclipselink.IsisModulePersistenceJpaEclipselink;
-import org.apache.isis.security.shiro.IsisModuleSecurityShiro;
+import org.apache.isis.security.bypass.IsisModuleSecurityBypass;
 import org.apache.isis.testing.fixtures.applib.IsisModuleTestingFixturesApplib;
 import org.apache.isis.testing.h2console.ui.IsisModuleTestingH2ConsoleUi;
 import org.apache.isis.viewer.restfulobjects.jaxrsresteasy4.IsisModuleViewerRestfulObjectsJaxrsResteasy4;
@@ -18,12 +18,11 @@ import org.apache.isis.viewer.wicket.viewer.IsisModuleViewerWicketViewer;
 import domainapp.webapp.application.ApplicationModule;
 import domainapp.webapp.application.fixture.scenarios.DomainAppDemo;
 import domainapp.webapp.custom.CustomModule;
-import domainapp.webapp.quartz.QuartzModule;
 
 @Configuration
 @Import({
         IsisModuleCoreRuntimeServices.class,
-        IsisModuleSecurityShiro.class,
+        IsisModuleSecurityBypass.class,
         IsisModulePersistenceJpaEclipselink.class,
         IsisModuleViewerRestfulObjectsJaxrsResteasy4.class,
         IsisModuleViewerWicketViewer.class,
@@ -35,7 +34,6 @@ import domainapp.webapp.quartz.QuartzModule;
 
         ApplicationModule.class,
         CustomModule.class,
-        QuartzModule.class,
 
         // discoverable fixtures
         DomainAppDemo.class
