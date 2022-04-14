@@ -10,7 +10,7 @@
         <version>2.0.0-M7</version>
     </parent>
 
-    <artifactId>simpleapp-jpa-module-simple</artifactId>
+    <artifactId>simpleapp-jpa-module-simple-3005</artifactId>
     <name>SimpleApp (JPA) - Simple Module</name>
 
     <build>

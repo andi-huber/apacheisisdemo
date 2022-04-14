@@ -30,24 +30,24 @@
             <!-- this project's own modules -->
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>simpleapp-jpa-module-simple</artifactId>
+                <artifactId>simpleapp-jpa-module-simple-3005</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>simpleapp-jpa-module-simple-tests</artifactId>
+                <artifactId>simpleapp-jpa-module-simple-tests-3005</artifactId>
                 <version>${project.version}</version>
                 <scope>test</scope>
                 <type>test-jar</type>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>simpleapp-jpa-webapp</artifactId>
+                <artifactId>simpleapp-jpa-webapp-3005</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>simpleapp-jpa-webapp-tests</artifactId>
+                <artifactId>simpleapp-jpa-webapp-tests-3005</artifactId>
                 <version>${project.version}</version>
                 <scope>test</scope>
                 <type>test-jar</type>
@@ -94,10 +94,21 @@
                 </property>
             </activation>
             <repositories>
-                <repository>
-                    <id>nightly-builds</id>
-                    <url>https://nexus.incode.work/repository/nightly-builds/</url>
-                </repository>
+			      <repository>
+			        <releases>
+			          <enabled>true</enabled>
+			          <updatePolicy>always</updatePolicy>
+			          <checksumPolicy>fail</checksumPolicy>
+			        </releases>
+			        <snapshots>
+			          <enabled>true</enabled>
+			          <updatePolicy>always</updatePolicy>
+			          <checksumPolicy>fail</checksumPolicy>
+			        </snapshots>
+			        <id>isis-nightly-snapshots</id>
+			        <name>Isis Nightly Snapshots (maven)</name>
+			        <url>https://raw.githubusercontent.com/apache-isis-committers/isis-nightly/master/mvn-snapshots</url>
+			      </repository>
             </repositories>
         </profile>
     </profiles>

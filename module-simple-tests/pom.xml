@@ -10,7 +10,7 @@
         <version>2.0.0-M7</version>
     </parent>
 
-    <artifactId>simpleapp-jpa-module-simple-tests</artifactId>
+    <artifactId>simpleapp-jpa-module-simple-tests-3005</artifactId>
     <name>SimpleApp (JPA) - Simple Module (tests)</name>
 
     <description>
@@ -39,7 +39,7 @@
 
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>simpleapp-jpa-module-simple</artifactId>
+            <artifactId>simpleapp-jpa-module-simple-3005</artifactId>
         </dependency>
 
         <!-- TESTS -->

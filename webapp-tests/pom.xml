@@ -8,7 +8,7 @@
         <version>2.0.0-M7</version>
     </parent>
 
-    <artifactId>simpleapp-jpa-webapp-tests</artifactId>
+    <artifactId>simpleapp-jpa-webapp-tests-3005</artifactId>
     <name>SimpleApp (JPA) - Webapp (tests)</name>
 
     <description>
@@ -36,7 +36,7 @@
 
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>simpleapp-jpa-webapp</artifactId>
+            <artifactId>simpleapp-jpa-webapp-3005</artifactId>
             <scope>test</scope>
         </dependency>
 
